@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RentStation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.myschema.by/SimpleStationSchema SimpleStationSchema.xsd"
+	xmlns="http://www.myschema.by/SimpleStationSchema">
+	<Managers>
+		<Manager ManagerID="1122334" ManagerName="Mr.Manager">
+			<RentUnits>
+				<Equipments>
+					<Skis>
+						<Ski isRented="false">
+							<Brand>Volkl</Brand>
+							<Category>CHILD</Category>
+							<Price>30.0</Price>
+						</Ski>
+						<Ski isRented="false">
+							<Brand>Fisher</Brand>
+							<Category>ADULT</Category>
+							<Price>25.0</Price>
+						</Ski>
+					</Skis>
+					<Snowboards>
+						<Snowboard isRented="false">
+							<Brand>Fisher</Brand>
+							<Category>CHILD</Category>
+							<Price>20.0</Price>
+						</Snowboard>
+						<Snowboard isRented="false">
+							<Brand>Flow</Brand>
+							<Category>ADULT</Category>
+							<Price>40.0</Price>
+						</Snowboard>
+						<Snowboard isRented="false">
+							<Brand>Burton</Brand>
+							<Category>ADULT</Category>
+							<Price>27.5</Price>
+						</Snowboard>
+					</Snowboards>
+				</Equipments>
+				<Accessorise>
+					<SkiAccessories>
+						<SkiAccessorise isRented="false">
+							<Brand>gopro</Brand>
+							<Name>Hero 4</Name>
+							<Colour>black</Colour>
+							<Price>25.0</Price>
+							<Type>OTHER</Type>
+						</SkiAccessorise>
+						<SkiAccessorise isRented="false">
+							<Brand>Atomic</Brand>
+							<Name>gloves</Name>
+							<Colour>white</Colour>
+							<Price>10.0</Price>
+							<Type>CLOTHES</Type>
+						</SkiAccessorise>
+					</SkiAccessories>
+					<SnowboardAccessories>
+						<SnowboardAccessorise isRented="false">
+							<Brand>Trespass</Brand>
+							<Name>no name</Name>
+							<Colour>green</Colour>
+							<Price>5.0</Price>
+							<Type>PROTECTION</Type>
+						</SnowboardAccessorise>
+					</SnowboardAccessories>
+				</Accessorise>
+			</RentUnits>
+		</Manager>
+	</Managers>
+</RentStation>

@@ -1,0 +1,66 @@
+<html>
+	<head lang="en">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Order</title>
+      <link rel="stylesheet" type="text/css" href="flexbox-layout.css"> 
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
+  </head>
+		<body>
+		<div class="container">
+		 <header>
+	        <nav>
+	        </nav>
+        </header>
+        <div class="main-and-sidebar-wrapper">
+	        <section class="main">
+	            <h2>Making order...</h2>
+
+	            <p>Add some things to your basket to buy it in future<p>
+	            <!--<h4>
+	                Thanks for choosing us.
+	            <h4>-->
+	         
+	            <form action = "MainServlet" method="GET">
+	            	
+			            <input type="hidden" name="action" value="create_order">
+			            <div class="main1">
+			            	<style>#field { text-align: right; }</style>
+				            <div class="field" id="field">
+					            <label for="user_id">User id</label>
+					            <input class="edit" type="text" name ="user_id" placeholder="user_id" id="user_id"/>
+				            </div>
+
+				            <style>#field { text-align: right; }</style>
+				            <div class="field" id="field">
+					            <label for="equipment_id">Equipment id</label>
+					            <input class="edit" type="text" name ="equipment_id" placeholder="equipment_id" id="equipment_id"/>
+				            </div>
+
+				            <style>#field { text-align: right; }</style>
+				            <div class="field" id="field">
+					            <label for="date_start">Pick-up date</label>
+					            <input class="edit" type="text" name ="date_start" placeholder="date_start" id="date_start"/>
+				            </div>
+
+				            <style>#field { text-align: right; }</style>
+				            <div class="field" id="field">
+					            <label for="date_end">Drop-of date </label>
+					            <input class="edit" type="text" name ="date_end" placeholder="date_end" id="date_end"/>
+				            </div>
+			            </div>
+			            <input type="submit" value="Order"/>
+			    </form>
+				<br>
+	            <img src="http://www.simply-chalets.co.uk/img/slider/skis.jpg">  
+	               
+	        </section>       
+    	</div>
+			
+	    
+	    <footer>
+	        <h3>Contact us</h3>
+	        <p>Copyright 2017 © mazets_anton@tut.by</p>
+    	</footer>
+	</body>
+</html>

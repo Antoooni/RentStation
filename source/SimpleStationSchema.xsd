@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.myschema.by/SimpleStationSchema" xmlns:xl="http://www.myschema.by/SimpleStationSchema"
+	elementFormDefault="qualified">
+
+
+	<xs:element name="RentStation">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Managers">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Manager">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="RentUnits">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Equipments">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="Skis">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="Ski" maxOccurs="unbounded">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="Brand" type="xs:string" />
+																						<xs:element name="Category" type="xs:string" />
+																						<xs:element name="Price" type="xs:double" />
+																					</xs:sequence>
+																					<xs:attribute name="isRented" type="xs:boolean" />
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="Snowboards">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="Snowboard" maxOccurs="unbounded">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="Brand" type="xs:string" />
+																						<xs:element name="Category" type="xs:string" />
+																						<xs:element name="Price" type="xs:double" />
+																					</xs:sequence>
+																					<xs:attribute name="isRented" type="xs:boolean" />
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																		<xs:attribute name="isRented" type="xs:boolean" />
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="Accessorise">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="SkiAccessories">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="SkiAccessorise"
+																				maxOccurs="unbounded">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="Brand" type="xs:string" />
+																						<xs:element name="Name" type="xs:string" />
+																						<xs:element name="Colour" type="xs:string" />
+																						<xs:element name="Price" type="xs:double" />
+																						<xs:element name="Type" type="xs:string" />
+																					</xs:sequence>
+																					<xs:attribute name="isRented" type="xs:boolean" />
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="SnowboardAccessories">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="SnowboardAccessorise"
+																				maxOccurs="unbounded">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="Brand" type="xs:string" />
+																						<xs:element name="Name" type="xs:string" />
+																						<xs:element name="Colour" type="xs:string" />
+																						<xs:element name="Price" type="xs:double" />
+																						<xs:element name="Type" type="xs:string" />
+																					</xs:sequence>
+																					<xs:attribute name="isRented" type="xs:boolean" />
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="ManagerID" type="xs:string" />
+									<xs:attribute name="ManagerName" type="xs:string">
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
