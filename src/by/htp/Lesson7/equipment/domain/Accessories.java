@@ -11,12 +11,12 @@ public abstract class Accessories extends RentUnit {
 	boolean isRented;
 	private Date pickUpDate;// until no use
 
-	public Accessories(String brand, String name, String color, double price, AccessoriesType type, boolean isRented) {
-		this.color = color;
+	public Accessories(String brand, String name, AccessoriesType type, String color, double price,  boolean isRented) {
 		this.brand = brand;
 		this.name = name;
-		this.price = price;
 		this.type = type;
+		this.color = color;
+		this.price = price;
 		this.isRented = isRented;
 	}
 

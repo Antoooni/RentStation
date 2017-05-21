@@ -5,12 +5,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ResourceBundle;
 
-
-
-import by.htp.entity.User;
+import by.htp.Lesson7.equipment.domain.User;
 
 import static by.htp.util.ConstantValue.*;
 
@@ -44,7 +41,8 @@ public class UserDaoImpl implements UserDao {
 				if(rs.next()){
 					String log = rs.getString(2);
 					String pass=  rs.getString(3);
-					boolean role = rs.getBoolean(5);
+					boolean role = rs.getBoolean(4);
+					System.out.println("Login: "+log+" password: "+pass);
 					
 					user = new User();
 					user.setLogin(log);

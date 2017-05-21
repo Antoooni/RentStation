@@ -14,11 +14,21 @@
     <div class="container">
      <header>
         <nav>
+        <form action = "MainServlet" method="GET" id="home">
+            <input type="hidden" name="action" value="go_home">
+            <!--<input type="submit" value="Home"/>-->
+            <div class ="text_order_color" >
+              <a href="#"  onclick="document.getElementById('home').submit(); return false;">
+                <h2>Home</h2>
+              </a>
+            </div>
+        </form>
         </nav>
       </header>
       <div class="main-and-sidebar-wrapper">
         <section class="main">
-            <h2>Oops:( Something wrong...</h2>   
+            <h3>Oops:( Something wrong...</h3><br>
+            <a>Probably this user does not exist</a>   
             <img src="sadness.png"> 
         </section>
       </div>

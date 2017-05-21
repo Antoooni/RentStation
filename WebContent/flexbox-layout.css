@@ -22,7 +22,6 @@ body {
     background-color: #fff;
     margin: 0 auto;
     padding: 0 60px;
-
     display: flex;
     flex-direction: column;
 
@@ -64,6 +63,20 @@ header button {
 
 .main-and-sidebar-wrapper {
     display: flex;
+
+}
+.completed {
+    /*max-width: 600px;*/
+    width: 50%;
+    height:  50%;
+    margin: auto;
+
+}
+.er {
+    /*max-width: 600px;*/
+    width: 50%;
+    height:  50%;
+    
 
 }
 
@@ -125,6 +138,18 @@ footer p {
 
     }
 }
+/*
+@media (max-width: 300px) {
+    .completed {
+        flex-direction: column;
+    }
+
+    .main {
+        margin-right: 0;
+        margin-bottom: 50px;
+
+    }
+}*/
 .modal {
         display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
@@ -184,7 +209,9 @@ footer p {
 
     }
 }
-/*для кнопок заказа*/
+/*для кнопок заказа
+https://habrahabr.ru/post/64530/
+*/
 .field {
     clear:both; text-align:left; line-height:25px;
 }
@@ -195,6 +222,26 @@ label {
     float:left;
      margin: auto;
 
+}
+.text_order_color{
+    color: #ef5350;
+    margin: 10px;
+}
+
+.auth {
+    clear:both; text-align:right; line-height:25px; 
+    /*border:1px solid #9E9E9E;*/
+        border-radius: 3px; //закругление углов (общее)
+       -webkit-border-radius: 3px; //закругление углов (Google Chrome)
+       -moz-border-radius: 3px; //закругление углов (FireFox)
+       -khtml-border-radius: 3px; //закругление углов (Safari)
+}
+label {
+    float:left; padding-right:10px;
+}
+.auth1 {float:left}
+.auth_button {
+    margin: auto;
 }
 
 

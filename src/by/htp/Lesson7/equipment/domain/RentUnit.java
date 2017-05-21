@@ -7,8 +7,8 @@ public abstract class RentUnit {
 
 	private Category category;
 	private AccessoriesType type;
-	private double price;
 	private String brand;
+	private double price;
 	private boolean isRented;
 	private Date pickUpDate;
 

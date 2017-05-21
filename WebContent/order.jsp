@@ -13,49 +13,64 @@
 		<div class="container">
 		 <header>
 	        <nav>
+	        <form action = "MainServlet" method="GET" id="home">
+	            <input type="hidden" name="action" value="go_home">
+	            <!--<input type="submit" value="Home"/>-->
+	            <div class ="text_order_color" >
+	              <a href="#"  onclick="document.getElementById('home').submit(); return false;">
+	                <h2>Home</h2>
+	              </a>
+	            </div>
+        	</form>
 	        </nav>
         </header>
-        <div class="main-and-sidebar-wrapper">
-	        <section class="main">
-	            <h2>Making order...</h2>
+	        <div class="main-and-sidebar-wrapper">
+		        <section class="main">
+		            <h2>Making order...</h2>
 
-	            <p>Add some things to your basket to buy it in future<p>
-	            <!--<h4>
-	                Thanks for choosing us.
-	            <h4>-->
-	            <style type="text/css">
-	            	input[type="text"] {
-					   border: 1px solid #cccccc; //цвет рамки
-					   border-radius: 3px; //закругление углов (общее)
-					   -webkit-border-radius: 3px; //закругление углов (Google Chrome)
-					   -moz-border-radius: 3px; //закругление углов (FireFox)
-					   -khtml-border-radius: 3px; //закругление углов (Safari)
-					   background: #ffffff !important; // желательно прописывать, так как в Chrome при сохранных данных оно может быть желтым
-					   outline: none; // удаляет обводку в браузерах хром(желтая) и сафари(синяя)
-					   height: 24px; // высота на свое усмотрение
-					   width: 120px; // ширина на свое усмотрение
-					   color: #cccccc; //цвет шрифта в обычном состоянии
-					   font-size: 11px; // Размер шрифта
-					   font-family: Tahoma; // Стиль шрифта
-					}	
-	            </style>
-	            <form action = "MainServlet" method="GET">
-			            <input type="hidden" name="action" value="create_order">
+		            <p>Add some things to your basket to buy it in future<p>
+		            <!--<h4>
+		                Thanks for choosing us.
+		            <h4>-->
+		            <form action = "MainServlet" method="GET" id="o">
+		            	
+				            <input type="hidden" name="action" value="create_order">
+				            <div class="main1">
 
-			            <input type="text" name ="user_id" placeholder="user_id"/>
-			            <br>
-			            <input type="text" name ="equipment_id"/>
-			            <input type="text" name ="date_start"/>
-			            <input type="text" name ="date_end"/>
-			            <input type="submit" value="Order" />
-			    </form>
-				<br>
-		            
+				            	<style>#field { text-align: right; }</style>
+					            <div class="field" id="field">
+						            <label for="basket_id">Basket id</label>
+						            <input class="edit" type="text" name ="basket_id" placeholder="basket_id" id="basket_id"/>
+					            </div>
 
-	            <img src="http://www.simply-chalets.co.uk/img/slider/skis.jpg">  
-	               
-	        </section>       
-    	</div>
+				            	<style>#field { text-align: right; }</style>
+					            <div class="field" id="field">
+						            <label for="user_id">User id</label>
+						            <input class="edit" type="text" name ="user_id" placeholder="user_id" id="user_id"/>
+					            </div>
+
+					            <style>#field { text-align: right; }</style>
+					            <div class="field" id="field">
+						            <label for="uid">UID </label>
+						            <input class="edit" type="text" name ="uid" placeholder="uid" id="uid"/>
+					            </div>
+
+					            <style>#field { text-align: right; }</style>
+					            <div class="field" id="field">
+						            <label for="date_start">Pick-up date</label>
+						            <input class="edit" type="text" name ="date_start" placeholder="date_start" id="date_start"/>
+					            </div>
+
+				            </div>
+				            <!--<input type="submit" value="Order"/>-->
+				            <div class ="text_order_color" >
+		            			<a href="#"  onclick="document.getElementById('o').submit(); return false;">
+		            			<h1>ORDER</h1></a>
+		            		</div>
+		            <img src="http://www.simply-chalets.co.uk/img/slider/skis.jpg">
+		        </section>       
+
+	    	</div>
 			
 	    
 	    <footer>

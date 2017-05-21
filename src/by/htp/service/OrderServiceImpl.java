@@ -2,13 +2,12 @@ package by.htp.service;
 
 import java.sql.Date;
 
+import by.htp.Lesson7.equipment.domain.Order;
+import by.htp.Lesson7.equipment.domain.User;
 import by.htp.dao.OrderDao;
 import by.htp.dao.OrderDaoImpl;
 import by.htp.dao.UserDao;
 import by.htp.dao.UserDaoImpl;
-import by.htp.entity.Equimpent;
-import by.htp.entity.Order;
-import by.htp.entity.User;
 
 public class OrderServiceImpl implements OrderService {
 	private OrderDao dao;
@@ -20,12 +19,12 @@ public class OrderServiceImpl implements OrderService {
 	
 
 	@Override
-	public Order makeOrder(User user, Equimpent equipment, Date start, Date end) {
+	public Order makeOrder(User user, int basket_id, String uid, Date start) {
 		Order order=new Order();
-		order.setEquipment(equipment);
 		order.setUser(user);
-		order.setDatStart(start);
-		order.setDatEnd(end);
+		order.setBasketId(basket_id);
+		order.setUid(uid);
+		order.setPickUpDate(start);
 		
 		dao.createOrder(order);
 		

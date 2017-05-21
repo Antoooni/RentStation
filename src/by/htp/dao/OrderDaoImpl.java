@@ -10,8 +10,8 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import by.htp.entity.Order;
-import by.htp.entity.User;
+import by.htp.Lesson7.equipment.domain.Order;
+import by.htp.Lesson7.equipment.domain.User;
 
 public class OrderDaoImpl implements OrderDao {
 
@@ -33,12 +33,12 @@ public class OrderDaoImpl implements OrderDao {
 				PreparedStatement ps= connection.prepareStatement(SQL_STATEMENT_ORDER_CREATE, PreparedStatement.RETURN_GENERATED_KEYS);
 //				ps.setString(1, login); // код для PreparedStatement
 //				ps.setString(2, password); // код для PreparedStatement
-				ps.setLong(1, order.getUser().getUserId());
-				ps.setLong(2, order.getEquipment().getEquipmentId());
-				ps.setDate(3, order.getDatStart());
-				ps.setDate(4, order.getDatEnd());
+				ps.setLong(1, order.getBasketId());
+				ps.setLong(2, order.getUser().getUserId());
+				ps.setString(3, order.getUid());
+				ps.setDate(4, order.getPickUpDate());
 				
-				 int id= ps.RETURN_GENERATED_KEYS;
+				int id= ps.RETURN_GENERATED_KEYS;
 				ps.executeUpdate(); 
 				
 				

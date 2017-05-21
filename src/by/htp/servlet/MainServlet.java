@@ -7,9 +7,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import by.htp.dao.UserDao;
-import by.htp.dao.UserDaoImpl;
 import by.htp.servlet.command.CommandChooser;
 import by.htp.servlet.command.СommandAction;
 
@@ -31,8 +30,6 @@ public class MainServlet extends HttpServlet {
 			throws ServletException, IOException {
 		processRequest(request, response); //пока закомменчена
 		System.out.println("do POST");
-		//UserDao dao = new UserDaoImpl();
-//		dao.fetchByCredentials("", "");
 
 	}
 
@@ -45,6 +42,7 @@ public class MainServlet extends HttpServlet {
 			RequestDispatcher disp = request.getRequestDispatcher(page);
 			disp.forward(request, response);
 		}
+		 
 
 	}
 

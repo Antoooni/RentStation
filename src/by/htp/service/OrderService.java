@@ -2,10 +2,9 @@ package by.htp.service;
 
 import java.sql.Date;
 
-import by.htp.entity.Equimpent;
-import by.htp.entity.Order;
-import by.htp.entity.User;
+import by.htp.Lesson7.equipment.domain.Order;
+import by.htp.Lesson7.equipment.domain.User;
 
 public interface OrderService {
-	public Order makeOrder(User userId, Equimpent equipment_Id, Date start, Date end);
+	public Order makeOrder(User userId, int basket_id, String uid, Date pickUpDate);
 }
